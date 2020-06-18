@@ -26,4 +26,8 @@ app.get("/protected", (req, res) => res.send("Protected"));
     - IF ANY OF THE REQUIREMENTS ARE NOT FULFILLED YOU WILL GET AN "X"
 
     https://codesandbox.io/s/express-blueprint-xtp9u
+
+    * Cannot set headers after they are sent to the client
+    라는 오류가 떴었는데 문제 해결에 도움이 된 링크추가
+    https://velog.io/@kim-macbook/Cannot-set-headers-after-they-are-sent-to-the-client
 */
