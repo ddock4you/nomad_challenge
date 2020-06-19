@@ -30,4 +30,7 @@ app.get("/protected", (req, res) => res.send("Protected"));
     * Cannot set headers after they are sent to the client
     라는 오류가 떴었는데 문제 해결에 도움이 된 링크추가
     https://velog.io/@kim-macbook/Cannot-set-headers-after-they-are-sent-to-the-client
+
+    답안지
+    https://codesandbox.io/s/day-four-solution-5zdh2
 */
