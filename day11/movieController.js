@@ -7,12 +7,23 @@ import {
 
 export const home = (req, res) => {
     const movies = getMovies();
-    // console.dir(movies);
-    res.render("movies", { movies });
+    res.render("movies", { subTitle: "movies!", movies });
 };
 export const movieDetail = (req, res) => {
     const movies = getMovieById(req.params.id);
-    console.log(movies);
-    res.render("detail", { movies });
+    res.render("detail", { subTitle: movies.title, movies });
 };
-export const filterMovie = (req, res) => {};
+export const filterMovie = (req, res) => {
+    let type = null;
+    let movies = null;
+
+    if (req.query.rating) {
+        type = `rating:${req.query.rating}`;
+        movies = getMovieByMinimumRating(req.query.rating);
+    }
+    if (req.query.year) {
+        type = `year:${req.query.year}`;
+        movies = getMovieByMinimumYear(req.query.year);
+    }
+    res.render("movies", { subTitle: `searching By ${type}`, movies });
+};
