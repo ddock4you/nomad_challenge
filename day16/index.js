@@ -26,4 +26,9 @@ app.listen(3000, () => console.log("hello"));
     - Not allowed to type the array from the frontend.
     - The app must behave exactly like the video
     - IF ANY OF THE REQUIREMENTS ARE NOT FULFILLED YOU WILL GET AN ❌
+
+    https://codesandbox.io/s/day-sixteen-blueprint-hlfzt
+
+    답안지
+    https://codesandbox.io/s/day-sixteen-solution-zrrru
 */
