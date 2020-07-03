@@ -1,7 +1,9 @@
 form(action=action method="post")
-    input(type="text" name="title" placeholder="Title")
-    input(type="number" name="year" placeholder="Year" min="0" max="2100")
-    input(type="text" name="rating" placeholder="Rating")
-    textarea(type="text" name="synopsis" placeholder="Synopsis")
-    input(type="text" name="genres" placeholder="Genres")
+    input(type="text" name="title" placeholder="Title" value=movie && movie.title)
+    input(type="number" name="year" placeholder="Year" min="0" max="2100" value=movie && movie.year)
+    input(type="text" name="rating" placeholder="Rating" value=movie && movie.rating)
+    textarea(type="text" name="synopsis" placeholder="Synopsis")=movie && movie.synopsis
+    input(type="text" name="genres" placeholder="Genres" value=movie && movie.genres.join(','))
     button(type="submit") submit
+if movie
+    a(href=`/${movie.id}/delete`) delete
