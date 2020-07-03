@@ -1,0 +1,6 @@
+extends templates/layout
+
+block content
+    h1 Editing #{pageTitle}
+    include movieForm
+    a(href=`${movie.id}/delete`)

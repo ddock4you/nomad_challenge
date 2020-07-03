@@ -1,0 +1,7 @@
+extends templates/layout
+
+block content
+    h1 Home
+    each movie in movies
+        h2
+            a(href=`/${movie.id}`) #{movie.title}
